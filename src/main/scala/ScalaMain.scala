@@ -5,11 +5,12 @@ class ScalaMain {
 object ScalaMain {
 
   def main(args: Array[String]): Unit = {
-    println("\nHello, world!")
 
     //Players --> GK, DEF, MID, FWD
-    val bocaJuniorsPlayers = List(new Player("Esteban Andrada","GK", Map("Goalkeeper" -> 80)), new Player("Leonardo Jara", "DEF", Map("Defense" -> 75, "Attack" -> 60)))
-    val riverPlatePlayers = List(new Player("Franco Armani","GK", Map("Goalkeeper" -> 85)), new Player("Jorge Moreira", "DEF", Map("Defense" -> 72, "Attack" -> 63)))
+    val bocaJuniorsPlayers = List(new Player("Esteban Andrada","GK", Map("Goalkeeping" -> 80)), new Player("Leonardo Jara", "DEF", Map("Defense" -> 75, "Attack" -> 60)), new Player("Dario Benedetto", "FWD", Map("Defense" ->20, "Attack" -> 90)))
+    bocaJuniorsPlayers(1).goals += 13
+    bocaJuniorsPlayers(2).goals = 15
+    val riverPlatePlayers = List(new Player("Franco Armani","GK", Map("Goalkeeping" -> 85)), new Player("Jorge Moreira", "DEF", Map("Defense" -> 72, "Attack" -> 63)))
 
     //Managers
     val bocaJuniorsManager = new Manager("Guillermo Barros Schelotto")
@@ -37,10 +38,9 @@ object ScalaMain {
     //League
     val primeraDivisionArgentina = new Competition("Primera Division Argentina", teamList, refereeList)
 
+    println("\n\n" +  primeraDivisionArgentina.toString + "\n\n")
+    println("Goalscorer: " + bocaJuniors.goalscorer)
 
-    primeraDivisionArgentina.teamList.foreach(team => println(team.name))
-
-    println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEXIT\n")
   }
 
 }
