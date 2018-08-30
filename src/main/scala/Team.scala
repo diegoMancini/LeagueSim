@@ -15,6 +15,8 @@ class Team (val name: String, val players: List[Player], val manager : Manager, 
     aux.head
   }
 
+  val printGoalscorer = s"${goalscorer.name}: ${goalscorer.goals} goals"
+
   private def goals(): Int = {
     @tailrec
       def goals(list: List[Player], accum: Int) : Int = {

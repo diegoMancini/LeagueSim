@@ -1,7 +1,3 @@
-class ScalaMain {
-
-}
-
 object ScalaMain {
 
   def main(args: Array[String]): Unit = {
@@ -39,7 +35,7 @@ object ScalaMain {
     val primeraDivisionArgentina = new Competition("Primera Division Argentina", teamList, refereeList)
 
     println("\n\n" +  primeraDivisionArgentina.toString + "\n\n")
-    println("Goalscorer: " + bocaJuniors.goalscorer)
+    println("Goalscorer: " + bocaJuniors.printGoalscorer)
 
   }
 
